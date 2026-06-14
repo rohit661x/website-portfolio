@@ -1,27 +1,27 @@
 const roles = [
   {
-    org: "Ontario Teachers' Pension Plan",
-    title: "Software Engineering Intern",
+    org: "IG Wealth Management",
+    title: "AI Developer",
+    location: "Burlington, ON",
+    period: "May 2026 — Present",
+  },
+  {
+    org: "Cohere Labs (Safety & Alignment)",
+    title: "Research Member",
     location: "Toronto, ON",
-    period: "May 2025 — Present",
+    period: "Mar 2026 — Present",
   },
   {
-    org: "Kaniq",
-    title: "AI Systems Developer",
-    location: "Remote",
-    period: "Mar 2026 — May 2026",
+    org: "Arkimetrix Analytics",
+    title: "Software Engineer",
+    location: "Hamilton, ON",
+    period: "Sept 2025 — Dec 2025",
   },
   {
-    org: "Queen's COMPSA",
-    title: "Backend Developer",
-    location: "Kingston, ON",
-    period: "Aug 2024 — Dec 2024",
-  },
-  {
-    org: "DDQIC",
-    title: "Entrepreneur in Residence",
-    location: "Kingston, ON",
-    period: "May 2024 — Aug 2024",
+    org: "McMaster University",
+    title: "Machine Learning Researcher",
+    location: "Hamilton, ON",
+    period: "Apr 2025 — Aug 2025",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function Experience() {
       style={{ animationDelay: "150ms" }}
     >
       <div className="flex justify-between items-end border-b-architectural pb-sm mb-md">
-        <h2 className="font-h3 text-h3 text-primary">Experience</h2>
+        <h2 className="font-h3 text-[28px] font-medium leading-tight text-primary">Experience</h2>
         <span className="font-meta-technical text-meta-technical text-on-surface-variant">
           01 // Work
         </span>
@@ -57,9 +57,9 @@ export default function Experience() {
         ))}
         <div className="p-md bg-surface-container-low flex justify-between items-center text-on-surface-variant">
           <span className="font-meta-technical text-meta-technical">
-            Earlier: McMaster University — Coding Mentor; Kumon — Grading Assistant
+            Affiliated Organizations: AI2; Grey Swan; EleutherAI
           </span>
-          <span className="material-symbols-outlined text-[16px]">history</span>
+          <span className="material-symbols-outlined text-[16px]">groups</span>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 const links = [
-  { label: "GitHub", href: "https://github.com/mominalvi" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/momin-alvi/" },
-  { label: "Email", href: "mailto:momin.alvi@queensu.ca" },
+  { label: "GitHub", href: "https://github.com/rohit661x" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/RohitSuryadevara" },
+  { label: "Email", href: "mailto:rohit.suryadevara.661@gmail.com" },
   { label: "Resume", href: "/resume.pdf" },
 ];
 
@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="w-full border-t border-outline-variant mt-auto bg-background" id="contact">
       <div className="max-w-container-max mx-auto px-lg md:px-xl py-xl flex flex-col md:flex-row justify-between items-center">
         <div className="font-label-caps text-label-caps text-primary mb-md md:mb-0">
-          © 2026 Momin Alvi
+          © 2026 Rohit Suryadevara
         </div>
         <div className="flex gap-lg">
           {links.map((link) => (

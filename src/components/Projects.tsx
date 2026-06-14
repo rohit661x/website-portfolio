@@ -1,24 +1,26 @@
 import RepoMenu from "@/components/RepoMenu";
 
-const featured = {
-  title: "Coursify.ca",
+const featured: {
+  title: string;
+  description: string;
+  highlights: string[];
+  tags: string[];
+  href?: string;
+  repos: { label: string; href: string }[];
+  note?: string;
+} = {
+  title: "MAP — Model-Agnostic Probabilistic Attribution for Prompt Reversal",
   description:
-    "A course insights platform for Queen's University, with data scraped from Reddit & RateMyProfessors and a RAG-powered AI assistant.",
+    "A statistical framework that identifies which language model produced a given output, classifying source models across 13 model families through black-box probing and probabilistic attribution. Presented at the Canadian Statistics Student Conference (Statistical Society of Canada).",
   highlights: [
-    "Aggregates course and professor data scraped from Reddit and RateMyProfessors.",
-    "RAG-powered AI assistant answers student questions about courses and profs.",
-    "Search, filters, and a student-facing course discovery UI.",
+    "Probabilistic attribution method to identify language-model sources using black-box probing and statistical classification across 13 model families.",
+    "90%+ attribution accuracy on held-out data, outperforming baseline heuristics and providing uncertainty estimates for ambiguous cases.",
+    "Generated attribution scores for 10K+ prompts across GPT, Claude, Llama, Gemini, Mistral and other families, supporting prompt-injection analysis and model fingerprinting.",
   ],
-  tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
-  href: "https://www.coursify.ca/",
-  repos: [
-    { label: "Web App", href: "https://github.com/amaanjaved1/Coursify-WebApp" },
-    { label: "RAG", href: "https://github.com/amaanjaved1/Coursify-RAG" },
-    {
-      label: "Web Scrapers",
-      href: "https://github.com/amaanjaved1/Coursify-Scrapers",
-    },
-  ],
+  tags: ["LLM Evaluation", "Python", "PyTorch", "NumPy/SciPy"],
+  href: undefined,
+  repos: [],
+  note: "Paper & code — coming soon",
 };
 
 const secondary: {
@@ -28,21 +30,32 @@ const secondary: {
   href?: string;
 }[] = [
   {
-    title: "Scholar Pups",
+    title: "Bastion — Scam-Detecting AI Email Assistant (IBM AI Builders Challenge)",
     description:
-      "AI scholarship discovery and feedback platform for underrepresented students.",
-    tags: ["FastAPI", "Next.js", "MongoDB", "LangChain"],
-    href: "https://github.com/connor-leung/scholar-pups",
+      "An LLM-security project: an injection-resilient agent that triages untrusted inbound content (emails, invoices, support tickets) while reducing the risk of prompt injection, tool misuse, data exfiltration, and unsafe instruction-following.",
+    tags: ["LangGraph", "IBM Granite", "LoRA", "Garak"],
+  },
+  {
+    title: "KuiperHunter — 3D U-Net for Object Detection in Deep Space",
+    description:
+      "A custom 3D U-Net in PyTorch for faint moving-object detection in astronomical images, targeting TNOs below standard noise thresholds, with a synthetic source-injection pipeline that generates training data at controlled signal-to-noise ratios for added robustness.",
+    tags: ["Deep Learning", "Computer Vision", "Python", "PyTorch"],
+  },
+  {
+    title: "Neuroplasticity-Inspired Deep Learning Optimizer",
+    description:
+      "A meta-learning framework to evaluate learning-rate schedules and optimizer design; a custom optimizer with dynamic sparsity regularization reached 52% model sparsity while holding 98% accuracy on MNIST for neural-network compression.",
+    tags: ["Meta-Learning", "Hyperparameter Optimization", "Model Compression", "PyTorch / TensorFlow"],
   },
 ];
 
-const GITHUB = "https://github.com/mominalvi";
+const GITHUB = "https://github.com/rohit661x";
 
 export default function Projects() {
   return (
     <section className="animate-fade-in-up" id="projects">
       <div className="flex justify-between items-end border-b-architectural pb-sm mb-md">
-        <h2 className="font-h3 text-h3 text-primary">Projects</h2>
+        <h2 className="font-h3 text-[28px] font-medium leading-tight text-primary">Projects</h2>
         <span className="font-meta-technical text-meta-technical text-on-surface-variant">
           02 // Projects
         </span>
@@ -87,22 +100,35 @@ export default function Projects() {
               </span>
             ))}
           </div>
-          <div className="flex gap-sm flex-wrap mt-auto">
-            <a
-              href={featured.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-accent px-md py-sm font-label-caps text-label-caps text-white inline-flex items-center gap-sm"
-            >
-              <span
-                className="material-symbols-outlined"
-                style={{ fontSize: "16px" }}
+          <div className="flex gap-sm flex-wrap items-center mt-auto">
+            {featured.href && (
+              <a
+                href={featured.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent px-md py-sm font-label-caps text-label-caps text-white inline-flex items-center gap-sm"
               >
-                language
+                <span
+                  className="material-symbols-outlined"
+                  style={{ fontSize: "16px" }}
+                >
+                  language
+                </span>
+                Live website
+              </a>
+            )}
+            {featured.repos.length > 0 && <RepoMenu repos={featured.repos} />}
+            {!featured.href && featured.repos.length === 0 && featured.note && (
+              <span className="font-meta-technical text-meta-technical text-on-surface-variant inline-flex items-center gap-sm">
+                <span
+                  className="material-symbols-outlined"
+                  style={{ fontSize: "16px" }}
+                >
+                  schedule
+                </span>
+                {featured.note}
               </span>
-              Live website
-            </a>
-            <RepoMenu repos={featured.repos} />
+            )}
           </div>
         </div>
 

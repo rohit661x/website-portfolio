@@ -1,8 +1,8 @@
 import RotatingText from "@/components/motion/RotatingText";
 import MagneticButton from "@/components/motion/MagneticButton";
 
-const GITHUB = "https://github.com/mominalvi";
-const LINKEDIN = "https://www.linkedin.com/in/momin-alvi/";
+const GITHUB = "https://github.com/rohit661x";
+const LINKEDIN = "https://www.linkedin.com/in/RohitSuryadevara";
 
 export default function Hero() {
   return (
@@ -14,25 +14,26 @@ export default function Hero() {
         className="font-h1 name-shine mt-md mb-md"
         style={{ fontSize: "clamp(40px, 8vw, 84px)", lineHeight: 0.95 }}
       >
-        MOMIN ALVI
+        ROHIT SURYADEVARA
       </h1>
       <p className="font-h3 text-h3 text-on-surface-variant mb-lg flex items-baseline gap-sm flex-wrap">
         I build{" "}
         <RotatingText
           words={[
+            "machine learning models",
             "AI systems",
-            "products people use",
-            "backend services",
             "data pipelines",
-            "RAG applications",
+            "data-driven insights",
+            "software that makes a difference",
           ]}
-          modes={["ai", "products", "backend", "pipelines", "rag"]}
+          modes={["ai", "products", "pipelines", "backend", "rag"]}
           interval={3400}
           className="font-bold text-[color:var(--accent)]"
         />
       </p>
       <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-lg">
-        CS student at Queen&apos;s &amp; Software Engineering Intern at OTPP.
+        Mathematics student at McMaster University &amp; Artificial Intelligence
+        Developer at IG Wealth Management.
       </p>
       <div className="flex gap-md flex-wrap">
         <MagneticButton

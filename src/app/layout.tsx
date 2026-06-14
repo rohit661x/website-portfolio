@@ -22,32 +22,35 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+// TODO: update to Rohit's real domain once chosen (used for OG/canonical URLs).
+const SITE_URL = "https://rohitsuryadevara.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mominalvi.com"),
-  title: "Momin Alvi — Software Engineer",
+  metadataBase: new URL(SITE_URL),
+  title: "Rohit Suryadevara — Machine Learning Engineer",
   description:
-    "CS student at Queen's and Software Engineering Intern at OTPP. Builder of AI systems, product tools, and clean web experiences.",
+    "Mathematics student at McMaster University and AI Developer at IG Wealth Management. Building machine learning models, AI systems, and data pipelines.",
   openGraph: {
-    title: "Momin Alvi — Software Engineer",
+    title: "Rohit Suryadevara — Machine Learning Engineer",
     description:
-      "Builder of AI systems, product tools, and clean web experiences.",
-    url: "https://mominalvi.com",
-    siteName: "Momin Alvi",
+      "Building machine learning models, AI systems, and data-driven insights.",
+    url: SITE_URL,
+    siteName: "Rohit Suryadevara",
     type: "website",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Tokyo skyline at dusk with Tokyo Tower and Mt. Fuji",
+        alt: "Rohit Suryadevara — Machine Learning Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Momin Alvi — Software Engineer",
+    title: "Rohit Suryadevara — Machine Learning Engineer",
     description:
-      "Builder of AI systems, product tools, and clean web experiences.",
+      "Building machine learning models, AI systems, and data-driven insights.",
     images: ["/og-image.jpg"],
   },
 };

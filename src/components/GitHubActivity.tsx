@@ -1,7 +1,7 @@
 import { fetchContributions, countToLevel } from "@/lib/github";
 
-const USERNAME = process.env.GITHUB_USERNAME || "mominalvi";
-const GH_URL = "https://github.com/mominalvi";
+const USERNAME = process.env.GITHUB_USERNAME || "rohit661x";
+const GH_URL = `https://github.com/${USERNAME}`;
 const MONTHS = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
