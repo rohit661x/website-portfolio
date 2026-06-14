@@ -1,10 +1,10 @@
 const interests = [
-  "Gym",
-  "Basketball",
-  "Quant Finance",
-  "Physics",
-  "Chess",
-  "Cars",
+  { name: "Gym", icon: "fitness_center" },
+  { name: "Basketball", icon: "sports_basketball" },
+  { name: "Quant Finance", icon: "trending_up" },
+  { name: "Video Games", icon: "sports_esports" },
+  { name: "Chess", icon: "strategy" },
+  { name: "Cars", icon: "directions_car" },
 ];
 
 export default function Interests() {
@@ -19,16 +19,17 @@ export default function Interests() {
           06 // Interests
         </span>
       </div>
-      <div className="flex flex-col gap-sm">
-        {interests.map((interest, i) => (
+      <div className="flex flex-col">
+        {interests.map((interest) => (
           <div
-            key={interest}
-            className={`group flex flex-col pb-xs ${
-              i < interests.length - 1 ? "border-b border-outline-variant" : ""
-            }`}
+            key={interest.name}
+            className="group flex items-center justify-between p-md rounded-sm hover:bg-surface-container/50 transition-all duration-300 cursor-default"
           >
-            <span className="font-body-md text-body-md font-bold text-primary group-hover:text-[color:var(--accent)] transition-colors">
-              {interest}
+            <span className="font-body-md text-body-md text-primary group-hover:translate-x-1 transition-transform">
+              {interest.name}
+            </span>
+            <span className="material-symbols-outlined text-[16px] text-outline group-hover:text-[color:var(--accent)] transition-colors">
+              {interest.icon}
             </span>
           </div>
         ))}

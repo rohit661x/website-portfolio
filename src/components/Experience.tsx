@@ -33,7 +33,7 @@ export default function Experience() {
       style={{ animationDelay: "150ms" }}
     >
       <div className="flex justify-between items-end border-b-architectural pb-sm mb-md">
-        <h2 className="font-h3 text-[28px] font-medium leading-tight text-primary">Experience</h2>
+        <h2 className="font-h3 text-h3 text-primary">Experience</h2>
         <span className="font-meta-technical text-meta-technical text-on-surface-variant">
           01 // Work
         </span>

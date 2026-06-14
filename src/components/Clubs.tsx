@@ -1,12 +1,12 @@
 const clubs = [
   {
-    org: "McMaster Artificial Intelligence Society",
+    org: "Mac AI Society",
     title: "AI Research Project Member",
     period: "Jun 2026 — Present",
   },
   {
     org: "Greypoint Industries",
-    title: "DND IDEaS Contract Bid Lead",
+    title: "DND IDEaS Contract Bid Lead ($200,000)",
     period: "May 2026",
   },
   {
@@ -23,9 +23,9 @@ export default function Clubs() {
       style={{ animationDelay: "450ms" }}
     >
       <div className="flex justify-between items-end border-b-architectural pb-sm mb-md">
-        <h2 className="font-h3 text-h3 text-primary">Clubs, Programs &amp; Research</h2>
+        <h2 className="font-h3 text-h3 text-primary">Extracurriculars</h2>
         <span className="font-meta-technical text-meta-technical text-on-surface-variant">
-          05 // Research
+          05 // Extracurriculars
         </span>
       </div>
       <div className="flex flex-col md:flex-1 border-architectural bg-surface-container-lowest shadow-sm">
