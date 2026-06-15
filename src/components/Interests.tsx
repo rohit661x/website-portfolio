@@ -1,7 +1,11 @@
-const interests = [
+const interests: { name: string; icon: string; detail?: string }[] = [
   { name: "Gym", icon: "fitness_center" },
   { name: "Basketball", icon: "sports_basketball" },
-  { name: "Quant Finance", icon: "trending_up" },
+  {
+    name: "Quant Finance",
+    icon: "trending_up",
+    detail: "Ranked 34th in Citadel's Australian Trading Invitational",
+  },
   { name: "Video Games", icon: "sports_esports" },
   { name: "Chess", icon: "strategy" },
   { name: "Cars", icon: "directions_car" },
@@ -23,11 +27,20 @@ export default function Interests() {
         {interests.map((interest) => (
           <div
             key={interest.name}
-            className="group flex items-center justify-between p-md rounded-sm hover:bg-surface-container/50 transition-all duration-300 cursor-default"
+            className="group flex items-start justify-between p-md rounded-sm hover:bg-surface-container/50 transition-all duration-300 cursor-default"
           >
-            <span className="font-body-md text-body-md text-primary group-hover:translate-x-1 transition-transform">
-              {interest.name}
-            </span>
+            <div className="flex flex-col">
+              <span className="font-body-md text-body-md text-primary group-hover:translate-x-1 transition-transform">
+                {interest.name}
+              </span>
+              {interest.detail && (
+                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out">
+                  <span className="min-h-0 overflow-hidden font-meta-technical text-meta-technical text-on-surface-variant pt-xs">
+                    {interest.detail}
+                  </span>
+                </div>
+              )}
+            </div>
             <span className="material-symbols-outlined text-[16px] text-outline group-hover:text-[color:var(--accent)] transition-colors">
               {interest.icon}
             </span>

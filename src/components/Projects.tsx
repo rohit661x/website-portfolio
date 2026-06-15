@@ -32,24 +32,24 @@ const secondary: {
   {
     title: "Bastion — Scam-Detecting AI Email Assistant (IBM AI Builders Challenge)",
     description:
-      "An LLM-security project: an injection-resilient agent that triages untrusted inbound content (emails, invoices, support tickets) while reducing the risk of prompt injection, tool misuse, data exfiltration, and unsafe instruction-following.",
+      "An injection-resilient LLM agent that safely triages untrusted inbound content — emails, invoices, and support tickets.",
     tags: ["LangGraph", "IBM Granite", "LoRA", "Garak"],
   },
   {
     title: "KuiperHunter — 3D U-Net for Object Detection in Deep Space",
+    href: "https://github.com/rohit661x/KuiperHunter",
     description:
-      "A custom 3D U-Net in PyTorch for faint moving-object detection in astronomical images, targeting TNOs below standard noise thresholds, with a synthetic source-injection pipeline that generates training data at controlled signal-to-noise ratios for added robustness.",
+      "A custom 3D U-Net for detecting faint moving objects (TNOs) in deep-space imagery, below standard noise thresholds.",
     tags: ["Deep Learning", "Computer Vision", "Python", "PyTorch"],
   },
   {
     title: "Neuroplasticity-Inspired Deep Learning Optimizer",
+    href: "https://github.com/rohit661x/neuroplasticity-metalearning",
     description:
-      "A meta-learning framework to evaluate learning-rate schedules and optimizer design; a custom optimizer with dynamic sparsity regularization reached 52% model sparsity while holding 98% accuracy on MNIST for neural-network compression.",
-    tags: ["Meta-Learning", "Hyperparameter Optimization", "Model Compression", "PyTorch / TensorFlow"],
+      "A meta-learning optimizer with dynamic sparsity regularization — 52% model sparsity at 98% MNIST accuracy.",
+    tags: ["Meta-Learning", "Model Compression", "PyTorch / TensorFlow"],
   },
 ];
-
-const GITHUB = "https://github.com/rohit661x";
 
 export default function Projects() {
   return (
@@ -64,7 +64,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
         {/* Featured — spans two rows */}
         <div
-          className="shimmer relative border-architectural p-lg md:row-span-2 flex flex-col"
+          className="shimmer relative border-architectural p-lg md:row-span-3 flex flex-col"
           style={{
             background:
               "linear-gradient(150deg, rgba(109,92,255,0.12), rgba(168,85,247,0.06))",
@@ -184,26 +184,6 @@ export default function Projects() {
             </div>
           );
         })}
-
-        {/* More on GitHub — fills the grid, sends to profile */}
-        <a
-          href={GITHUB}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="tile-lift group border-architectural p-md flex items-center justify-between bg-surface-container-lowest"
-        >
-          <div className="flex flex-col">
-            <span className="font-body-md text-body-md font-bold text-primary group-hover:text-[color:var(--accent)] transition-colors">
-              More on GitHub
-            </span>
-            <span className="font-meta-technical text-meta-technical text-on-surface-variant">
-              Side projects, experiments &amp; source
-            </span>
-          </div>
-          <span className="material-symbols-outlined text-[20px] text-outline group-hover:text-[color:var(--accent)] transition-colors">
-            open_in_new
-          </span>
-        </a>
       </div>
     </section>
   );

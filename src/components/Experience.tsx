@@ -1,34 +1,57 @@
-const roles = [
+import ExperienceRow, { type Role } from "./ExperienceRow";
+
+const roles: Role[] = [
   {
     org: "IG Wealth Management",
     title: "AI Developer",
-    location: "Burlington, ON",
+    location: "Toronto, ON",
     period: "May 2026 — Present",
+    linkedin: "https://www.linkedin.com/company/igwealthmanagement/",
+    bullets: [
+      "Describe a key responsibility or project at IG Wealth Management.",
+      "Highlight an impact, metric, or technology you used.",
+      "Add another accomplishment for this role.",
+    ],
   },
   {
     org: "Cohere Labs (Safety & Alignment)",
     title: "Research Member",
     location: "Toronto, ON",
     period: "Mar 2026 — Present",
+    linkedin: "https://www.linkedin.com/showcase/cohere-labs/",
+    bullets: [
+      "Describe your research focus or contribution at Cohere Labs.",
+      "Highlight a result, paper, or method you worked on.",
+    ],
   },
   {
     org: "Arkimetrix Analytics",
     title: "Software Engineer",
     location: "Hamilton, ON",
     period: "Sept 2025 — Dec 2025",
+    linkedin: "https://www.linkedin.com/company/arkimetrix-analytics/",
+    bullets: [
+      "Describe what you built at Arkimetrix Analytics.",
+      "Highlight the stack, scale, or impact of your work.",
+    ],
   },
   {
     org: "McMaster University",
     title: "Machine Learning Researcher",
     location: "Hamilton, ON",
     period: "Apr 2025 — Aug 2025",
+    linkedin: "https://www.linkedin.com/school/mcmaster-university/",
+    bullets: [
+      "Describe your ML research at McMaster University.",
+      "Highlight a model, dataset, or finding you produced.",
+    ],
   },
 ];
 
 export default function Experience() {
   return (
     <section
-      className="animate-fade-in-up"
+      className="animate-fade-in-up md:h-full md:flex md:flex-col"
       id="experience"
       style={{ animationDelay: "150ms" }}
     >
@@ -38,29 +61,10 @@ export default function Experience() {
           01 // Work
         </span>
       </div>
-      <div className="flex flex-col border-architectural bg-surface-container-lowest">
+      <div className="flex flex-col md:flex-1 border-architectural bg-surface-container-lowest">
         {roles.map((role) => (
-          <div
-            key={`${role.org}-${role.title}`}
-            className="group flex flex-col md:flex-row md:items-center justify-between p-md border-b border-outline-variant border-l-2 border-l-transparent hover:border-l-[color:var(--accent)] hover:bg-surface-container transition-all duration-200 cursor-default"
-          >
-            <div className="flex flex-col md:flex-row md:items-center gap-xs md:gap-md">
-              <span className="text-sm font-bold text-primary group-hover:text-[color:var(--accent)] group-hover:translate-x-1 transition-all">
-                {role.org}
-              </span>
-              <span className="text-sm text-on-surface-variant">{role.title}</span>
-            </div>
-            <div className="font-meta-technical text-meta-technical text-outline mt-sm md:mt-0 md:text-right shrink-0">
-              {role.location} • {role.period}
-            </div>
-          </div>
+          <ExperienceRow key={`${role.org}-${role.title}`} role={role} />
         ))}
-        <div className="p-md bg-surface-container-low flex justify-between items-center text-on-surface-variant">
-          <span className="font-meta-technical text-meta-technical">
-            Affiliated Organizations: AI2; Grey Swan; EleutherAI
-          </span>
-          <span className="material-symbols-outlined text-[16px]">groups</span>
-        </div>
       </div>
     </section>
   );
