@@ -7,7 +7,7 @@ const interests: { name: string; icon: string; detail?: string }[] = [
     detail: "Ranked 34th in Citadel's Australian Trading Invitational",
   },
   { name: "Video Games", icon: "sports_esports" },
-  { name: "Chess", icon: "strategy" },
+  { name: "Chess", icon: "chess_knight" },
   { name: "Cars", icon: "directions_car" },
 ];
 
