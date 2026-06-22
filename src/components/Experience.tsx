@@ -20,8 +20,9 @@ const roles: Role[] = [
     period: "Mar 2026 — Present",
     linkedin: "https://www.linkedin.com/showcase/cohere-labs/",
     bullets: [
-      "Describe your research focus or contribution at Cohere Labs.",
-      "Highlight a result, paper, or method you worked on.",
+      "Engineered MAP, a black-box LLM attribution framework to classify 13 frontier model families and quantify prompt injection risks via behavioral feature extraction; presented statistical alignment findings at the Canadian Statistical Student Conference (May 2026).",
+      "Developed automated PyTorch-based evaluation pipelines to stress-test black-box behaviors, establishing rigorous red-teaming methodologies and guardrail validation benchmarks for deployment-facing GenAI systems.",
+      "Co-authored open-source safety evaluation datasets in collaboration with global researchers, publishing reproducible alignment benchmarks on Hugging Face to standardize jailbreak robustness and reward model (RM) testing across diverse architectures.",
     ],
   },
   {
