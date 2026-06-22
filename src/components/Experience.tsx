@@ -8,9 +8,9 @@ const roles: Role[] = [
     period: "May 2026 — Present",
     linkedin: "https://www.linkedin.com/company/igwealthmanagement/",
     bullets: [
-      "Describe a key responsibility or project at IG Wealth Management.",
-      "Highlight an impact, metric, or technology you used.",
-      "Add another accomplishment for this role.",
+      "Built an agentic framework hosted on GCP using Pub/Sub, Dataflow, and BigQuery orchestrated via Gemini Enterprise Agents alongside deterministic custom models for regulatory-compliant automation reducing standardized mortgage review by 90% saving 400–500 hours monthly.",
+      "Engineered production guardrails that reduced API costs by 60% via Vertex AI Vector Search semantic caching, automated PII masking using Cloud DLP, and deployed Vertex AI Pipelines for continuous hallucination tracking.",
+      "Shipped POC-to-production agentic workflows under MLOps and agile frameworks; while managing technical governance documentation and strategic alignment presentations for the MIB division.",
     ],
   },
   {
