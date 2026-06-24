@@ -14,12 +14,14 @@ export default function MagneticButton({
   className,
   target,
   rel,
+  download,
 }: {
   children: ReactNode;
   href: string;
   className?: string;
   target?: string;
   rel?: string;
+  download?: string;
 }) {
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
@@ -43,6 +45,7 @@ export default function MagneticButton({
       href={href}
       target={target}
       rel={rel}
+      download={download}
       className={className}
       style={{ x: sx, y: sy }}
       onMouseMove={onMove}

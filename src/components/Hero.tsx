@@ -61,12 +61,11 @@ export default function Hero() {
           </MagneticButton>
           <MagneticButton
             href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Rohit_Suryadevara_Resume.pdf"
             className="px-md py-sm border-architectural bg-surface-container-lowest text-primary font-label-caps text-label-caps inline-flex items-center gap-sm"
           >
             <span className="material-symbols-outlined" style={{ fontSize: "16px" }}>
-              description
+              download
             </span>
             Resume
           </MagneticButton>
