@@ -43,8 +43,8 @@ const roles: Role[] = [
     period: "Apr 2025 — Aug 2025",
     linkedin: "https://www.linkedin.com/school/mcmaster-university/",
     bullets: [
-      "Describe your ML research at McMaster University.",
-      "Highlight a model, dataset, or finding you produced.",
+      "Achieved 4x faster pattern recognition on 100GB+ genomic datasets by engineering novel overlapping position algorithms to eliminate sequential bottlenecks in the MAXCOVER protein sequence pipeline.",
+      "Eliminated reproducibility gaps by building automated testing infrastructure with GitHub Actions, PyTorch, and MLflow; benchmarked latency and throughput across experimental workflows for consistent model validation.",
     ],
   },
 ];
