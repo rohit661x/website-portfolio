@@ -6,10 +6,8 @@ const clubs: Club[] = [
     title: "AI Research Project Member",
     period: "Jun 2026 — Present",
     bullets: [
-      "Describe your work on the AI research project at Mac AI Society.",
-      "Highlight a model, result, or contribution.",
-      "Add another responsibility or focus area.",
-      "Add a final accomplishment for this role.",
+      "Building a multimodal deep learning system to classify thoracic abnormalities and estimate severity from chest X-rays, generating saliency heatmaps (Grad-CAM) for explainable localization of model predictions.",
+      "Developing a vision-language pipeline to produce radiology-style diagnostic reports from imaging features; advancing the project from research to a presented system at the Canadian Undergraduate Conference on AI (CUCAI) 2027.",
     ],
   },
   {
@@ -17,10 +15,8 @@ const clubs: Club[] = [
     title: "DND IDEaS Contract Bid Lead ($200,000)",
     period: "May 2026",
     bullets: [
-      "Describe your role leading the DND IDEaS contract bid.",
-      "Highlight the scope, team, or outcome of the $200,000 bid.",
-      "Add another responsibility or focus area.",
-      "Add a final accomplishment for this role.",
+      "Architected a Bayesian/Kalman multi-modal sensor fusion model for a DND IDEaS counter-drone proposal, fusing RF/EW telemetry, visual-inertial kinematics, and operational context through a soft-switching anti-spoof gate for resilient tracking in GPS/RF-contested environments.",
+      "Sustained track continuity under individual sensor dropout via dynamic confidence reweighting across heterogeneous inputs; designed for edge deployment within SWaP constraints; submitted as a $200K competitive bid.",
     ],
   },
   {
@@ -28,10 +24,9 @@ const clubs: Club[] = [
     title: "DevOps Engineer",
     period: "Jan 2026 — Apr 2026",
     bullets: [
-      "Describe your DevOps work at DEFEND / 65square.",
-      "Highlight the infrastructure, tooling, or pipelines you built.",
-      "Add another responsibility or focus area.",
-      "Add a final accomplishment for this role.",
+      "Streamlined release automation by engineering CI/CD pipelines with GitLab CI/CD, building and pushing Docker container images to AWS.",
+      "Standardized dependency management and dev/prod parity by migrating back-end services into isolated Docker containers.",
+      "Restored platform reliability by leading Level 2 incident response, performing RCA on service failures, and deploying automated pipeline fixes.",
     ],
   },
 ];
