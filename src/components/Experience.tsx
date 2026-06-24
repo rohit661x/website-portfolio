@@ -22,7 +22,7 @@ const roles: Role[] = [
     bullets: [
       "Engineered MAP, a black-box LLM attribution framework to classify 13 frontier model families and quantify prompt injection risks via behavioral feature extraction; presented statistical alignment findings at the Canadian Statistical Student Conference (May 2026).",
       "Developed automated PyTorch-based evaluation pipelines to stress-test black-box behaviors, establishing rigorous red-teaming methodologies and guardrail validation benchmarks for deployment-facing GenAI systems.",
-      "Co-authored open-source safety evaluation datasets in collaboration with global researchers, publishing reproducible alignment benchmarks on Hugging Face to standardize jailbreak robustness and reward model (RM) testing across diverse architectures.",
+      "Expanded guardrail robustness via multilingual safety benchmarking, evaluating reward model vulnerabilities, cross-cultural prompt injections, and toxic generation risks across low-resource languages for open-source community releases.",
     ],
   },
   {
