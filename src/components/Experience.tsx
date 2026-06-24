@@ -32,8 +32,8 @@ const roles: Role[] = [
     period: "Sept 2025 — Dec 2025",
     linkedin: "https://www.linkedin.com/company/arkimetrix-analytics/",
     bullets: [
-      "Describe what you built at Arkimetrix Analytics.",
-      "Highlight the stack, scale, or impact of your work.",
+      "Reduced manual processing by 70%+ across 10K+ records by building document parsing pipelines via Azure Form Recognizer, Google Gemini API, and Docker with containerized CI/CD and schema enforcement.",
+      "Cut end-to-end reporting latency by 90% (minutes → sub-30 seconds) by optimizing Flask/PostgreSQL APIs and ETL pipelines via CRON jobs for month-end batch processing.",
     ],
   },
   {
