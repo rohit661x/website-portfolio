@@ -1,0 +1,112 @@
+---
+import { work } from "../data/content";
+import Carousel from "./Carousel.astro";
+---
+
+<section data-section="work" id="work" aria-label="Work" class="section legible">
+  <Carousel total={work.length} label="Work">
+    {
+      work.map((job, i) => (
+        <article class="slide" data-slide aria-label={`${i + 1} of ${work.length}: ${job.org}`}>
+          <div class="body">
+            <p class="kind mono" data-reveal="item">{job.kind}</p>
+            <h2 class="org" data-reveal="title">{job.org}</h2>
+            <p class="role mono" data-reveal="item">{job.role}</p>
+            <p class="meta mono" data-reveal="item">
+              {[job.location, job.dates].filter(Boolean).join("  ·  ")}
+            </p>
+            <ul class="points">
+              {job.points.map((point) => (
+                <li data-reveal="item">{point}</li>
+              ))}
+            </ul>
+            {job.href && (
+              <a class="link" href={job.href} target="_blank" rel="noopener noreferrer" data-reveal="item">
+                {job.org} on LinkedIn →
+              </a>
+            )}
+          </div>
+        </article>
+      ))
+    }
+  </Carousel>
+</section>
+
+<style>
+  .slide {
+    position: absolute;
+    inset: 0 0 3.5rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+  }
+  .body {
+    margin: auto 0;
+    padding-left: 34%;
+    max-width: calc(34% + 38rem);
+  }
+  .kind {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
+  }
+  .org {
+    margin-top: 0.6rem;
+    font-size: clamp(2.25rem, 4.6vw, 4.25rem);
+    line-height: 1.05;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+  .role {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--color-accent);
+  }
+  .meta {
+    margin-top: 0.35rem;
+    font-size: 0.72rem;
+    color: color-mix(in srgb, var(--color-text-primary) 45%, transparent);
+  }
+  .points {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: color-mix(in srgb, var(--color-text-primary) 72%, transparent);
+  }
+  .points li {
+    position: relative;
+    padding-left: 1.1rem;
+  }
+  .points li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: color-mix(in srgb, var(--color-accent) 60%, transparent);
+  }
+  .link {
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 1100px) {
+    .body {
+      padding-left: 18%;
+    }
+  }
+  @media (max-width: 768px) {
+    .slide {
+      inset: 1.75rem 0 3rem;
+    }
+    .body {
+      margin: 0;
+      padding-left: 0;
+    }
+    .points {
+      font-size: 0.78rem;
+    }
+  }
+</style>

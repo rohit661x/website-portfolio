@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0c0b0f;
+  --color-surface: #16141b;
+  --color-line: #2b2833;
+  --color-text-primary: #ebe8f0;
+  --color-accent: #b79cff;
+  --color-accent-soft: #e4dcff;
+  --color-counter: #4a4654;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  --frame: 3rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --frame: 12px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keeps text legible over the grain */
+.legible {
+  text-shadow:
+    0 0 16px var(--color-background),
+    0 0 6px var(--color-background);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.muted {
+  color: color-mix(in srgb, var(--color-text-primary) 55%, transparent);
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-accent);
+  transition: color 0.2s;
+}
+.link:hover,
+.link:focus-visible {
+  color: var(--color-accent-soft);
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* SplitText mask wrappers */
+.split-mask {
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+
+/* Phones in landscape don't have the height for the frame */
+.landscape-overlay {
+  display: none;
+}
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+  .landscape-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: var(--color-background);
+    text-align: center;
+  }
+}

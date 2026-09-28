@@ -1,0 +1,120 @@
+---
+import { links, projects } from "../data/content";
+import Carousel from "./Carousel.astro";
+
+const total = projects.length + 1;
+---
+
+<section data-section="projects" id="projects" aria-label="Projects" class="section legible">
+  <Carousel total={total} label="Projects">
+    {
+      projects.map((p, i) => (
+        <article class="slide" data-slide aria-label={`${i + 1} of ${total}: ${p.name}`}>
+          <div class="body">
+            <h2 class="name" data-reveal="title">{p.name}</h2>
+            <p class="subtitle mono" data-reveal="item">{p.subtitle}</p>
+            <p class="description" data-reveal="lines">{p.description}</p>
+          </div>
+          <div class="footer mono" data-reveal="item">
+            <p class="tags">{p.tags.join("  ·  ")}</p>
+            {p.href ? (
+              <a class="link" href={p.href} target="_blank" rel="noopener noreferrer">
+                Source on GitHub →
+              </a>
+            ) : (
+              p.note && <p class="note">{p.note}</p>
+            )}
+          </div>
+        </article>
+      ))
+    }
+    <article class="slide" data-slide aria-label={`${total} of ${total}: More on GitHub`}>
+      <div class="body">
+        <h2 class="name" data-reveal="title">More on GitHub</h2>
+        <p class="description" data-reveal="lines">Side projects, experiments and source.</p>
+        <a class="link more" href={links.github} target="_blank" rel="noopener noreferrer" data-reveal="item">
+          github.com/rohit661x →
+        </a>
+      </div>
+    </article>
+  </Carousel>
+</section>
+
+<style>
+  .slide {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .body {
+    margin: auto 0;
+    padding-left: 42%;
+  }
+  .name {
+    font-size: clamp(2.5rem, 5.5vw, 5rem);
+    line-height: 1.05;
+    font-weight: 300;
+    letter-spacing: -0.015em;
+  }
+  .subtitle {
+    margin-top: 1rem;
+    max-width: 30rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: color-mix(in srgb, var(--color-text-primary) 45%, transparent);
+  }
+  .description {
+    margin-top: 1.5rem;
+    max-width: 30rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: color-mix(in srgb, var(--color-text-primary) 72%, transparent);
+  }
+  .more {
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+    min-height: 44px;
+    justify-content: flex-end;
+    font-size: 0.75rem;
+  }
+  .tags {
+    color: color-mix(in srgb, var(--color-accent) 75%, transparent);
+  }
+  .note {
+    color: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
+  }
+
+  @media (max-width: 1100px) {
+    .body {
+      padding-left: 24%;
+    }
+  }
+  @media (max-width: 768px) {
+    .slide {
+      inset: 1.75rem 0 3rem;
+    }
+    .body {
+      margin: 0;
+      padding-left: 0;
+    }
+    .footer {
+      position: static;
+      align-items: flex-start;
+      margin-top: 1.5rem;
+      font-size: 0.68rem;
+    }
+  }
+</style>
