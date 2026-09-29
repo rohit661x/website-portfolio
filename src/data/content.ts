@@ -156,19 +156,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Playwright-RL",
+    subtitle: "Multi-Step Browser Control with vLLM and GRPO",
+    description:
+      "Engineered an autonomous web agent by GRPO fine-tuning Qwen3-8B on BrowserGym and Playwright environments to execute complex, multi-step browser navigation. Designed a composite reward function blending task completion, Playwright JSON syntax, and DOM-grounding signals, elevating valid action rate from 42% to 94% on WebArena tasks.",
+    tags: ["Python", "PyTorch", "TRL", "vLLM", "Playwright", "Docker"],
+    href: "https://github.com/rohit661x/Playwright-RL",
+  },
+  {
     name: "MAP",
     subtitle: "Model-Agnostic Probabilistic Attribution for Prompt Reversal",
     description:
       "A statistical framework that identifies which language model produced a given output, classifying source models across 13 model families through black-box probing and probabilistic attribution. 82% attribution accuracy on held-out data with uncertainty estimates, across 10K+ prompts. Presented at the Canadian Statistics Student Conference (Statistical Society of Canada).",
     tags: ["LLM Evaluation", "Python", "PyTorch", "NumPy/SciPy"],
     note: "Paper & code coming soon",
-  },
-  {
-    name: "Bastion",
-    subtitle: "Scam-Detecting AI Email Assistant · IBM AI Builders Challenge",
-    description:
-      "An injection-resilient LLM agent that safely triages untrusted inbound content: emails, invoices, and support tickets.",
-    tags: ["LangGraph", "IBM Granite", "LoRA", "Garak"],
   },
   {
     name: "KuiperHunter",
