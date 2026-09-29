@@ -6,9 +6,10 @@ export const profile = {
   description:
     "Rohit Suryadevara is a mathematics student at McMaster University and AI Developer at IG Wealth Management, building machine learning models, AI systems, and research on LLM safety.",
   home: [
-    "Mathematics at McMaster. AI Developer at IG Wealth Management.",
-    "Research in LLM attribution and safety with Cohere Labs.",
-    "I build models, and the systems that keep them honest.",
+    "I think in systems, dig for root causes, and build for change.",
+    "Hard problems are the interesting ones.",
+    "Fast is good, correct is better, and trusted is the whole point.",
+    "I build things meant to outlast the reason I started them.",
   ],
   bio: "I'm a mathematics student at McMaster University working where statistics meets machine learning. At IG Wealth Management I build agentic, compliance-grade AI systems on GCP; on the research side I work with Cohere Labs on black-box LLM attribution and safety. Away from the terminal it's quant finance (34th in Citadel's Australian Trading Invitational), chess, basketball, the gym, cars and video games.",
 };
