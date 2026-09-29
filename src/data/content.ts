@@ -50,7 +50,6 @@ export const work: Role[] = [
     location: "Toronto, ON",
     dates: "May 2026 — Aug 2026",
     kind: "Experience",
-    href: "https://www.linkedin.com/company/igwealthmanagement/",
     points: [
       "Built a mortgage risk-scoring system from POC to production: deterministic weighted model with external API signals, deployed as a React/Python service on GCP (Pub/Sub, Dataflow, BigQuery, Gemini Enterprise Agents), cutting review time 90% and saving 400–500 underwriter hours/month.",
       "Developed a TypeScript MCP connector exposing RocketReach tools to Claude, enabling AI agents to qualify 540+ contacts per mandate and automate an 8-hour manual process.",
@@ -72,7 +71,6 @@ export const work: Role[] = [
     location: "Toronto, ON",
     dates: "Mar 2026 — Present",
     kind: "Experience",
-    href: "https://www.linkedin.com/showcase/cohere-labs/",
     points: [
       "Engineered MAP, a black-box LLM attribution framework classifying 13 frontier model families at 82% accuracy using statistical anomaly detection and feature engineering on model behavior; presented at the Canadian Statistical Student Conference (2026).",
       "Built a multi-provider LLM evaluation pipeline in PyTorch with SQLite provenance tracking, 225-feature extraction, and GitHub Actions CI regression tests benchmarking prompt injection and reward model vulnerabilities.",
