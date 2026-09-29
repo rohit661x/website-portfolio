@@ -4,20 +4,21 @@ export const profile = {
   name: "Rohit Suryadevara",
   titles: ["ML Engineer", "AI Developer", "Data Engineer", "Mathematics @ McMaster"],
   description:
-    "Rohit Suryadevara is a mathematics student at McMaster University and AI Developer at IG Wealth Management, building machine learning models, AI systems, and research on LLM safety.",
+    "Rohit Suryadevara is a Mathematics & Statistics student at McMaster University researching LLM privacy at Carnegie Mellon and model evaluation with Cohere Labs, and building production machine learning systems.",
   home: [
     "I think in systems, dig for root causes, and build for change.",
     "Hard problems are the interesting ones.",
     "Fast is good, correct is better, and trusted is the whole point.",
     "I build things meant to outlast the reason I started them.",
   ],
-  bio: "I'm a mathematics student at McMaster University working where statistics meets machine learning. At IG Wealth Management I build agentic, compliance-grade AI systems on GCP; on the research side I work with Cohere Labs on black-box LLM attribution and safety. Away from the terminal it's quant finance (34th in Citadel's Australian Trading Invitational), chess, basketball, the gym, cars and video games.",
+  bio: "I'm a Mathematics & Statistics student at McMaster University working where statistics meets machine learning. Right now I'm researching LLM privacy at Carnegie Mellon and model evaluation with Cohere Labs; before that I took AI systems from prototype to production at IG Wealth Management. Away from the terminal it's quant finance (34th in Citadel's Australian Trading Invitational), chess, basketball, the gym, cars and video games.",
 };
 
 export const links = {
   email: "rohit.suryadevara.661@gmail.com",
   github: "https://github.com/rohit661x",
   linkedin: "https://www.linkedin.com/in/RohitSuryadevara",
+  resume: "/resume.pdf",
 };
 
 export type Role = {
