@@ -32,41 +32,59 @@ export type Role = {
 
 export const work: Role[] = [
   {
-    org: "IG Wealth Management",
-    role: "AI Developer",
-    location: "Toronto, ON",
-    dates: "May 2026 — Present",
+    org: "Carnegie Mellon University",
+    role: "Research Contributor",
+    dates: "Aug 2026 — Present",
     kind: "Experience",
-    href: "https://www.linkedin.com/company/igwealthmanagement/",
     points: [
-      "Built an agentic framework hosted on GCP using Pub/Sub, Dataflow, and BigQuery orchestrated via Gemini Enterprise Agents alongside deterministic custom models for regulatory-compliant automation reducing standardized mortgage review by 90% saving 400–500 hours monthly.",
-      "Engineered production guardrails that reduced API costs by 60% via Vertex AI Vector Search semantic caching, automated PII masking using Cloud DLP, and deployed Vertex AI Pipelines for continuous hallucination tracking.",
-      "Shipped POC-to-production agentic workflows under MLOps and agile frameworks; while managing technical governance documentation and strategic alignment presentations for the MIB division.",
+      "Translated research hypotheses on LLM privacy into reproducible PyTorch experimentation pipelines, implementing DP-SGD fine-tuning for 1–8B parameter models with LoRA and Opacus across 800+ tracked runs.",
+      "Designed and ran controlled experiments across 6 datasets and multiple privacy budgets, evaluating DP vs. non-DP models on training-data extraction and accuracy with confidence intervals.",
     ],
   },
   {
-    org: "Cohere Labs",
-    role: "Research Member · Safety & Alignment",
+    org: "IG Wealth Management",
+    role: "Artificial Intelligence Engineer Intern",
+    location: "Toronto, ON",
+    dates: "May 2026 — Aug 2026",
+    kind: "Experience",
+    href: "https://www.linkedin.com/company/igwealthmanagement/",
+    points: [
+      "Built a mortgage risk-scoring system from POC to production: deterministic weighted model with external API signals, deployed as a React/Python service on GCP (Pub/Sub, Dataflow, BigQuery, Gemini Enterprise Agents), cutting review time 90% and saving 400–500 underwriter hours/month.",
+      "Developed a TypeScript MCP connector exposing RocketReach tools to Claude, enabling AI agents to qualify 540+ contacts per mandate and automate an 8-hour manual process.",
+    ],
+  },
+  {
+    org: "Greypoint Industries (YC S26)",
+    role: "Machine Learning Engineer (Contract)",
+    dates: "Apr 2026 — May 2026",
+    kind: "Experience",
+    points: [
+      "Built the ML tracking system for a $200K Canadian defence proposal, helping drones maintain reliable target tracking when sensors were jammed, spoofed, or unavailable; combined multiple sensor inputs using Kalman filtering and adaptive weighting, reducing tracking error 45%.",
+      "Built a Python simulation and testing framework that recreated jamming, spoofing, and sensor failures to measure system reliability before deployment, rejecting 99% of spoofed measurements and automatically flagging accuracy and latency regressions.",
+    ],
+  },
+  {
+    org: "Cohere Labs Open Science Community",
+    role: "Research Member · Evaluation",
     location: "Toronto, ON",
     dates: "Mar 2026 — Present",
     kind: "Experience",
     href: "https://www.linkedin.com/showcase/cohere-labs/",
     points: [
-      "Engineered MAP, a black-box LLM attribution framework to classify 13 frontier model families and quantify prompt injection risks via behavioral feature extraction; presented statistical alignment findings at the Canadian Statistical Student Conference (May 2026).",
-      "Developed automated PyTorch-based evaluation pipelines to stress-test black-box behaviors, establishing rigorous red-teaming methodologies and guardrail validation benchmarks for deployment-facing GenAI systems.",
-      "Expanded guardrail robustness via multilingual safety benchmarking, evaluating reward model vulnerabilities, cross-cultural prompt injections, and toxic generation risks across low-resource languages for open-source community releases.",
+      "Engineered MAP, a black-box LLM attribution framework classifying 13 frontier model families at 82% accuracy using statistical anomaly detection and feature engineering on model behavior; presented at the Canadian Statistical Student Conference (2026).",
+      "Built a multi-provider LLM evaluation pipeline in PyTorch with SQLite provenance tracking, 225-feature extraction, and GitHub Actions CI regression tests benchmarking prompt injection and reward model vulnerabilities.",
     ],
   },
   {
     org: "Arkimetrix Analytics",
-    role: "Software Engineer",
+    role: "Data Engineering Intern",
     location: "Hamilton, ON",
     dates: "Sept 2025 — Dec 2025",
     kind: "Experience",
     href: "https://www.linkedin.com/company/arkimetrix-analytics/",
     points: [
-      "Reduced manual processing by 70%+ across 10K+ records by building document parsing pipelines via Azure Form Recognizer, Google Gemini API, and Docker with containerized CI/CD and schema enforcement.",
-      "Cut end-to-end reporting latency by 90% (minutes → sub-30 seconds) by optimizing Flask/PostgreSQL APIs and ETL pipelines via CRON jobs for month-end batch processing.",
+      "Architected a containerized document parsing engine via Azure Form Recognizer and Google Gemini API, extracting 10K+ unstructured records and reducing manual processing by 70%+.",
+      "Orchestrated terabyte-scale backend infrastructure with Apache Airflow, PostgreSQL, and Flask, optimizing database schemas to drive faster end-to-end month-end reporting cycles.",
     ],
   },
   {
@@ -82,6 +100,26 @@ export const work: Role[] = [
     ],
   },
   {
+    org: "Google Developer Groups McMaster",
+    role: "Open Source Developer",
+    dates: "Sept 2026 — Present",
+    kind: "Extracurricular",
+    points: [
+      "Developing Sentinel, an open-source multi-agent LLM security platform using LangGraph, MCP, and RAG to detect software supply-chain, dependency, and CI/CD vulnerabilities in GitHub pull requests.",
+      "Building an LLM evaluation benchmark of adversarial pull requests (malicious install scripts, unpinned GitHub Actions, secret exposure) to measure agent precision, recall, and false-positive rate.",
+    ],
+  },
+  {
+    org: "DeGroote Finance & Investment Council",
+    role: "Quantitative Strategies",
+    dates: "Sept 2026 — Present",
+    kind: "Extracurricular",
+    points: [
+      "Developed and backtested algorithmic trading strategies in Python & C# for a ~$180K long-only equities fund; built a multi-asset momentum strategy (RSI, EMA, MACD), ranking top 10 in QuantConnect's open-source competition.",
+      "Built a statistical arbitrage pairs-trading strategy using cointegration and ADF tests to identify stationary spreads for mean reversion; analyzed risk-adjusted performance using Sharpe ratio, max drawdown, alpha, and beta.",
+    ],
+  },
+  {
     org: "Mac AI Society",
     role: "AI Research Project Member",
     dates: "Jun 2026 — Present",
@@ -89,16 +127,6 @@ export const work: Role[] = [
     points: [
       "Building a multimodal deep learning system to classify thoracic abnormalities and estimate severity from chest X-rays, generating saliency heatmaps (Grad-CAM) for explainable localization of model predictions.",
       "Developing a vision-language pipeline to produce radiology-style diagnostic reports from imaging features; advancing the project from research to a presented system at the Canadian Undergraduate Conference on AI (CUCAI) 2027.",
-    ],
-  },
-  {
-    org: "Greypoint Industries",
-    role: "DND IDEaS Contract Bid Lead ($200,000)",
-    dates: "May 2026",
-    kind: "Extracurricular",
-    points: [
-      "Architected a Bayesian/Kalman multi-modal sensor fusion model for a DND IDEaS counter-drone proposal, fusing RF/EW telemetry, visual-inertial kinematics, and operational context through a soft-switching anti-spoof gate for resilient tracking in GPS/RF-contested environments.",
-      "Sustained track continuity under individual sensor dropout via dynamic confidence reweighting across heterogeneous inputs; designed for edge deployment within SWaP constraints; submitted as a $200K competitive bid.",
     ],
   },
   {
@@ -128,7 +156,7 @@ export const projects: Project[] = [
     name: "MAP",
     subtitle: "Model-Agnostic Probabilistic Attribution for Prompt Reversal",
     description:
-      "A statistical framework that identifies which language model produced a given output, classifying source models across 13 model families through black-box probing and probabilistic attribution. 90%+ attribution accuracy on held-out data with uncertainty estimates, across 10K+ prompts. Presented at the Canadian Statistics Student Conference (Statistical Society of Canada).",
+      "A statistical framework that identifies which language model produced a given output, classifying source models across 13 model families through black-box probing and probabilistic attribution. 82% attribution accuracy on held-out data with uncertainty estimates, across 10K+ prompts. Presented at the Canadian Statistics Student Conference (Statistical Society of Canada).",
     tags: ["LLM Evaluation", "Python", "PyTorch", "NumPy/SciPy"],
     note: "Paper & code coming soon",
   },
