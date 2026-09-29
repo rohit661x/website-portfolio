@@ -2,8 +2,8 @@ import { fragmentShader, vertexShader } from "./shaders";
 
 type Params = { center: [number, number]; radius: number };
 
-const DESKTOP: Params = { center: [0.74, 0.3], radius: 0.8 };
-const MOBILE: Params = { center: [0.8, 0.26], radius: 0.62 };
+const DESKTOP: Params = { center: [0.26, 0.36], radius: 0.8 };
+const MOBILE: Params = { center: [0.22, 0.3], radius: 0.62 };
 
 function hexToRgb(hex: string): [number, number, number] {
   const n = parseInt(hex.trim().replace("#", ""), 16);

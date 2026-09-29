@@ -100,7 +100,7 @@ void main() {
 
   // Drifting bands: noise stretched across the lean, slowly advected
   float t = uTime;
-  vec3 q = vec3(r.x * 1.4, r.y * 3.6, 0.0) + vec3(t * 0.035, -t * 0.02, t * 0.045);
+  vec3 q = vec3(r.x * 1.4, r.y * 3.6, 0.0) + vec3(t * 0.04375, -t * 0.025, t * 0.05625);
   float n = fbm(q) * 0.5 + 0.5;
   float bands = pow(clamp(n, 0.0, 1.0), 2.6);
 
