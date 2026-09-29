@@ -84,7 +84,6 @@ export const work: Role[] = [
     location: "Hamilton, ON",
     dates: "Sept 2025 — Dec 2025",
     kind: "Experience",
-    href: "https://www.linkedin.com/company/arkimetrix-analytics/",
     points: [
       "Architected a containerized document parsing engine via Azure Form Recognizer and Google Gemini API, extracting 10K+ unstructured records and reducing manual processing by 70%+.",
       "Orchestrated terabyte-scale backend infrastructure with Apache Airflow, PostgreSQL, and Flask, optimizing database schemas to drive faster end-to-end month-end reporting cycles.",
@@ -96,7 +95,6 @@ export const work: Role[] = [
     location: "Hamilton, ON",
     dates: "Apr 2025 — Aug 2025",
     kind: "Experience",
-    href: "https://www.linkedin.com/school/mcmaster-university/",
     points: [
       "Achieved 4x faster pattern recognition on 100GB+ genomic datasets by engineering novel overlapping position algorithms to eliminate sequential bottlenecks in the MAXCOVER protein sequence pipeline.",
       "Eliminated reproducibility gaps by building automated testing infrastructure with GitHub Actions, PyTorch, and MLflow; benchmarked latency and throughput across experimental workflows for consistent model validation.",
@@ -186,6 +184,14 @@ export const projects: Project[] = [
       "A meta-learning optimizer with dynamic sparsity regularization: 52% model sparsity at 98% MNIST accuracy.",
     tags: ["Meta-Learning", "Model Compression", "PyTorch", "TensorFlow"],
     href: "https://github.com/rohit661x/neuroplasticity-metalearning",
+  },
+  {
+    name: "Crypto Tick Microstructure",
+    subtitle: "High-Frequency BTC/ETH Lead-Lag Price Discovery",
+    description:
+      "Built a pipeline over 50M BTC/ETH trades from Binance, applying JIT-compiled estimators to correct the sampling bias that distorts correlation at millisecond scale, lifting measured correlation from 0.45 to 0.82. Found BTC leads ETH by 10ms and drives 86% of shared price discovery (t = 7.86); backtesting put the edge's breakeven cost at 0.86bps against 2bps real fees, killing the strategy on economics rather than shipping an overfit backtest.",
+    tags: ["Python", "Numba", "pandas", "NumPy/SciPy", "statsmodels", "Matplotlib"],
+    href: "https://github.com/rohit661x/crypto-tick-microstructure",
   },
 ];
 
