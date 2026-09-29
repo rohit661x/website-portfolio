@@ -2,7 +2,7 @@
 
 export const profile = {
   name: "Rohit Suryadevara",
-  titles: ["ML Engineer", "AI Developer", "Researcher", "Mathematics @ McMaster"],
+  titles: ["ML Engineer", "AI Developer", "Data Engineer", "Mathematics @ McMaster"],
   description:
     "Rohit Suryadevara is a mathematics student at McMaster University and AI Developer at IG Wealth Management, building machine learning models, AI systems, and research on LLM safety.",
   home: [
