@@ -187,6 +187,14 @@ export const projects: Project[] = [
     tags: ["Meta-Learning", "Model Compression", "PyTorch", "TensorFlow"],
     href: "https://github.com/rohit661x/neuroplasticity-metalearning",
   },
+  {
+    name: "Crypto Tick Microstructure",
+    subtitle: "High-Frequency BTC/ETH Lead-Lag Price Discovery",
+    description:
+      "Built a pipeline over 50M BTC/ETH trades from Binance, applying JIT-compiled estimators to correct the sampling bias that distorts correlation at millisecond scale, lifting measured correlation from 0.45 to 0.82. Found BTC leads ETH by 10ms and drives 86% of shared price discovery (t = 7.86); backtesting put the edge's breakeven cost at 0.86bps against 2bps real fees, killing the strategy on economics rather than shipping an overfit backtest.",
+    tags: ["Python", "Numba", "pandas", "NumPy/SciPy", "statsmodels", "Matplotlib"],
+    href: "https://github.com/rohit661x/crypto-tick-microstructure",
+  },
 ];
 
 export const stack: { label: string; items: string }[] = [
