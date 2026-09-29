@@ -84,7 +84,6 @@ export const work: Role[] = [
     location: "Hamilton, ON",
     dates: "Sept 2025 — Dec 2025",
     kind: "Experience",
-    href: "https://www.linkedin.com/company/arkimetrix-analytics/",
     points: [
       "Architected a containerized document parsing engine via Azure Form Recognizer and Google Gemini API, extracting 10K+ unstructured records and reducing manual processing by 70%+.",
       "Orchestrated terabyte-scale backend infrastructure with Apache Airflow, PostgreSQL, and Flask, optimizing database schemas to drive faster end-to-end month-end reporting cycles.",
@@ -96,7 +95,6 @@ export const work: Role[] = [
     location: "Hamilton, ON",
     dates: "Apr 2025 — Aug 2025",
     kind: "Experience",
-    href: "https://www.linkedin.com/school/mcmaster-university/",
     points: [
       "Achieved 4x faster pattern recognition on 100GB+ genomic datasets by engineering novel overlapping position algorithms to eliminate sequential bottlenecks in the MAXCOVER protein sequence pipeline.",
       "Eliminated reproducibility gaps by building automated testing infrastructure with GitHub Actions, PyTorch, and MLflow; benchmarked latency and throughput across experimental workflows for consistent model validation.",
