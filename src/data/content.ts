@@ -17,7 +17,7 @@ export const profile = {
 export const links = {
   // Reversed then base64-encoded so the address never appears in plain text
   // (source or HTML) for scrapers; decoded in the browser by scripts/email.ts
-  emailEncoded: "bW9jLmxpYW1nQDE2Ni5hcmF2ZWRheXJ1cy50aWhvcg==",
+  emailEncoded: "dmVkLmFyYXZlZGF5cnVzdGlob3JAb2xsZWg=",
   github: "https://github.com/rohit661x",
   linkedin: "https://www.linkedin.com/in/RohitSuryadevara",
   resume: "/resume.pdf",
