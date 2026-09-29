@@ -1,0 +1,177 @@
+---
+import Analytics from "@vercel/analytics/astro";
+import "../styles/global.css";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Home from "../components/Home.astro";
+import Projects from "../components/Projects.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Work from "../components/Work.astro";
+import { profile } from "../data/content";
+
+const title = `${profile.name}: ${profile.titles[0]}`;
+const ogImage = new URL("/og.jpg", Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0c0b0f" />
+    <title>{title}</title>
+    <meta name="description" content={profile.description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={Astro.site} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={profile.description} />
+    <meta property="og:url" content={Astro.site} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <noscript>
+      <style>
+        #preloader { display: none !important; }
+        #site-root { opacity: 1 !important; pointer-events: auto !important; }
+        .section { position: relative !important; visibility: visible !important; opacity: 1 !important; }
+        #content-area { overflow-y: auto; }
+        [data-slide] { position: relative !important; }
+      </style>
+    </noscript>
+  </head>
+  <body class="overflow-hidden">
+    <!-- Frame sits above the preloader so it stays put while the overlay fades -->
+    <div id="page-frame" aria-hidden="true"></div>
+
+    <div id="preloader" aria-hidden="true">
+      <span id="preloader-name">
+        <span id="preloader-title">{profile.name}</span>
+        <span id="preloader-sub">Portfolio</span>
+      </span>
+    </div>
+
+    <div id="site-root" aria-hidden="true" style="opacity: 0; pointer-events: none">
+      <!-- WebGL canvas mounts here; the solid colour is the fallback -->
+      <div id="background" aria-hidden="true"></div>
+      <div id="scrim" aria-hidden="true"></div>
+      <div id="mask" aria-hidden="true"></div>
+
+      <div class="landscape-overlay" role="alert">
+        <span>Rotate your device</span>
+        <span class="mono muted" style="font-size: 0.75rem">This site is designed for portrait</span>
+      </div>
+
+      <Sidebar />
+
+      <main id="content-area">
+        <Home />
+        <Work />
+        <Projects />
+        <About />
+        <Contact />
+      </main>
+    </div>
+
+    <Analytics />
+    <script>
+      import "../scripts/main";
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  #page-frame {
+    position: fixed;
+    inset: var(--frame);
+    border: 1px solid var(--color-text-primary);
+    pointer-events: none;
+    z-index: 10000;
+  }
+  #preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+  }
+  #preloader-name {
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    font-weight: 300;
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
+  }
+  #preloader-title {
+    color: #fff;
+  }
+  #preloader-sub {
+    color: #6b6b6b;
+    font-weight: 100;
+    margin-left: 0.35em;
+  }
+  #background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: var(--color-background);
+  }
+  #scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: color-mix(in srgb, var(--color-background) 30%, transparent);
+  }
+  #mask {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    border: var(--frame) solid #000;
+  }
+  #content-area {
+    position: fixed;
+    top: var(--frame);
+    right: var(--frame);
+    bottom: var(--frame);
+    left: calc(var(--frame) + 148px);
+    z-index: 5;
+  }
+  .section {
+    position: absolute;
+    inset: 0;
+    padding: 9.2rem 3rem 2.5rem;
+  }
+  .section > * {
+    position: relative;
+  }
+  .section[data-section="home"] > .lines {
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    #content-area {
+      top: calc(var(--frame) + 5.5rem);
+      left: calc(35% + 20px);
+    }
+    .section {
+      padding: 0.75rem 0.75rem 1rem 0;
+      overflow-y: auto;
+      scrollbar-width: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .section > * {
+      flex: 1 0 auto;
+    }
+    .section[data-section="home"] > .lines {
+      right: 0.75rem;
+      bottom: 0.75rem;
+    }
+  }
+</style>

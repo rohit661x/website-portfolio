@@ -1,0 +1,27 @@
+---
+import { profile } from "../data/content";
+---
+
+<section data-section="home" id="home" aria-label="Home" class="section">
+  <p class="lines" data-reveal="lines">
+    {profile.home.map((line) => <Fragment>{line}<br /></Fragment>)}
+  </p>
+</section>
+
+<style>
+  /* Positioned bottom-right by the page's .section rules */
+  .lines {
+    font-size: 0.875rem;
+    line-height: 1.625;
+    letter-spacing: 0.025em;
+    text-align: right;
+    /* A touch brighter than the site's body text */
+    color: #f7f5fa;
+  }
+  @media (max-width: 768px) {
+    .lines {
+      font-size: 0.7rem;
+      line-height: 1.5;
+    }
+  }
+</style>

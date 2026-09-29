@@ -1,0 +1,90 @@
+---
+import { links, profile, stack } from "../data/content";
+---
+
+<section data-section="about" id="about" aria-label="About" class="section legible">
+  <div class="about">
+    <p class="bio" data-reveal="lines">{profile.bio}</p>
+    <dl class="stack mono">
+      {
+        stack.map((row) => (
+          <div data-reveal="item">
+            <dt>{row.label}</dt>
+            <dd>{row.items}</dd>
+          </div>
+        ))
+      }
+    </dl>
+    <p class="links" data-reveal="item">
+      <a class="link" href={links.github} target="_blank" rel="noopener noreferrer">GitHub →</a>
+      <a class="link" href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+      <a class="link" href={links.resume} download="Rohit_Suryadevara_Resume.pdf">Resume →</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .about {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 34%;
+  }
+  .bio {
+    max-width: 38rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: color-mix(in srgb, var(--color-text-primary) 62%, transparent);
+  }
+  .stack {
+    margin-top: 3rem;
+    display: grid;
+    gap: 0.7rem;
+    font-size: 0.75rem;
+  }
+  .stack div {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1rem;
+  }
+  dt {
+    color: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
+  }
+  dd {
+    color: color-mix(in srgb, var(--color-text-primary) 80%, transparent);
+  }
+  .links {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  @media (max-width: 1100px) {
+    .about {
+      padding-left: 18%;
+    }
+  }
+  @media (max-width: 768px) {
+    .about {
+      height: auto;
+      padding: 2rem 0 1rem;
+    }
+    .bio {
+      font-size: 0.9rem;
+    }
+    .stack div {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+    .links {
+      gap: 1.25rem;
+    }
+    .links .link {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+  }
+</style>
