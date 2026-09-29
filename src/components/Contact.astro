@@ -2,7 +2,6 @@
 import { links } from "../data/content";
 
 const rows = [
-  { label: "Email", text: links.email, href: `mailto:${links.email}` },
   { label: "GitHub", text: "rohit661x", href: links.github },
   { label: "LinkedIn", text: "RohitSuryadevara", href: links.linkedin },
 ];
@@ -13,15 +12,18 @@ const rows = [
     <h2 class="heading" data-reveal="title">Let's build something.</h2>
     <p class="lede" data-reveal="lines">Email is the fastest way to reach me.</p>
     <ul class="rows mono">
+      <li data-reveal="item">
+        <span class="label">Email</span>
+        <!-- Address is assembled client-side (scripts/email.ts) to keep it away from scrapers -->
+        <a class="link" href="#contact" data-email={links.emailEncoded} aria-disabled="true">
+          <span data-email-text>enable JavaScript to see email</span> →
+        </a>
+      </li>
       {
         rows.map((row) => (
           <li data-reveal="item">
             <span class="label">{row.label}</span>
-            <a
-              class="link"
-              href={row.href}
-              {...(row.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            >
+            <a class="link" href={row.href} target="_blank" rel="noopener noreferrer">
               {row.text} →
             </a>
           </li>

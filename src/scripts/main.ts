@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { GrainScene } from "../background/GrainScene";
 import { initCarousels } from "./carousel";
+import { initEmailLinks } from "./email";
 import { reducedMotion } from "./reveal";
 import { initRouter } from "./router";
 import { initTitleCycler } from "./titleCycler";
@@ -10,6 +11,7 @@ const preloader = document.getElementById("preloader")!;
 const background = document.getElementById("background")!;
 
 const scene = GrainScene.mount(background, { isStatic: reducedMotion });
+initEmailLinks();
 initCarousels();
 const router = initRouter();
 
