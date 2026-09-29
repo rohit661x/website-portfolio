@@ -3,6 +3,6 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://website-portfolio-three-flax.vercel.app",
+  site: "https://rohitsuryadevara.dev",
   vite: { plugins: [tailwindcss()] },
 });
