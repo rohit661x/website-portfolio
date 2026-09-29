@@ -11,7 +11,7 @@ export const profile = {
     "Fast is good, correct is better, and trusted is the whole point.",
     "I build things meant to outlast the reason I started them.",
   ],
-  bio: "I'm a Mathematics & Statistics student at McMaster University working where statistics meets machine learning. Right now I'm researching LLM privacy at Carnegie Mellon and model evaluation with Cohere Labs; before that I took AI systems from prototype to production at IG Wealth Management. Away from the terminal it's quant finance (34th in Citadel's Australian Trading Invitational), chess, basketball, the gym, cars and video games.",
+  bio: "I'm a Mathematics & Statistics student at McMaster University working where statistics meets machine learning. Right now I'm researching LLM privacy at Carnegie Mellon and model evaluation with Cohere Labs; before that I took AI systems from prototype to production at IG Wealth Management. Away from the terminal I am passionate about quant finance (34th in Citadel's Australian Trading Invitational), chess, basketball, the gym, cars and video games.",
 };
 
 export const links = {
