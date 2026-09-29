@@ -37,7 +37,7 @@ export const work: Role[] = [
     dates: "Aug 2026 — Present",
     kind: "Experience",
     points: [
-      "Translated research hypotheses on LLM privacy into reproducible PyTorch experimentation pipelines, implementing DP-SGD fine-tuning for 1–8B parameter models with LoRA and Opacus across 800+ tracked runs.",
+      "Conducted LLM privacy research under Prof. Hana Habib, translating research hypotheses into reproducible PyTorch pipelines and implemented DP-SGD fine-tuning for 1–8B parameter models with LoRA and Opacus.",
       "Designed and ran controlled experiments across 6 datasets and multiple privacy budgets, evaluating DP vs. non-DP models on training-data extraction and accuracy with confidence intervals.",
     ],
   },
